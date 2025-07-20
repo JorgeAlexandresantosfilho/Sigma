@@ -56,7 +56,7 @@ bash
 Copiar
 Editar
 # Clone the repository
-git clone https://github.com/yourusername/manga-reader-backend.git](https://github.com/JorgeAlexandresantosfilho/Sigma.git
+git clone https://github.com/JorgeAlexandresantosfilho/manga-reader-backend.git
 cd manga-reader-backend
 
 # Install dependencies
@@ -79,6 +79,8 @@ DB_NAME=manga_reader
 PORT=3000
 🧪 To Do / Next Steps
  File upload system with Multer or similar
+
+ User authentication (JWT or session-based)
 
  Frontend integration (Flutter or React Native)
 
