@@ -56,7 +56,7 @@ bash
 Copiar
 Editar
 # Clone the repository
-git clone https://github.com/yourusername/manga-reader-backend.git
+git clone https://github.com/yourusername/manga-reader-backend.git](https://github.com/JorgeAlexandresantosfilho/Sigma.git
 cd manga-reader-backend
 
 # Install dependencies
