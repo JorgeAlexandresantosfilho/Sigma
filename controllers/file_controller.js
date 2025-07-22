@@ -26,7 +26,35 @@ async function GetFiles(req, res){
     }
 }
 
+
+async function Searchtitle(req, res){
+    const title = req.params.title;
+  try {
+    const book = await  file_models.SearchTitle(title);
+    if (!book) return res.status(404).json({ Msg: "Error, fields empty. Please repeat request." });
+    res.status(200).json(book);
+  } catch (error) {
+    res.status(500).json({ Msg: "Error, please wait...", error: error.message });
+  }
+}
+
+// file update
+
+async function Fileupdt(req, res){
+    const id = req.params.id;
+    const {title, description, file_format, file_path} = req.body;
+    try {
+        const result = await  file_models.updateFile(id, title, description, file_format, file_path);
+        res.status(200).json({ Msg: "Sucess, file updated.", result });
+    } catch (error) {
+        res.status(500).json({ Msg: "Error, please wait...", error: error.message });
+    }
+}
+
+
 module.exports = {
     CreateFile,
-    GetFiles
+    GetFiles,
+    Searchtitle,
+    Fileupdt
 }
