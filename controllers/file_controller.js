@@ -50,11 +50,20 @@ async function Fileupdt(req, res){
         res.status(500).json({ Msg: "Error, please wait...", error: error.message });
     }
 }
-
+async function delfile(req, res) {
+    const id = req.params.id;
+    try {
+        const result = await file_models.DeleteFile(id);
+        res.status(200).json({ Msg: "File deleted.", result});
+    } catch (error) {
+        res.status(500).json({ Msg: "Error, please wait...", error: error.message });
+    }
+}
 
 module.exports = {
     CreateFile,
     GetFiles,
     Searchtitle,
-    Fileupdt
+    Fileupdt,
+    delfile
 }

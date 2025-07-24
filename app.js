@@ -7,8 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 //post file route
-app.use('/file-post', file_routes);
-
+app.use('/file', file_routes);
 
 
 module.exports = app;
